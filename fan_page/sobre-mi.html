@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Sobre mí - FanPage Lucas</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="js/main.js" defer></script>
+</head>
+<body>
+    <header class="site-header">
+        <div class="top-bar">
+            <div class="logo-area">
+                <span class="logo-text">Lucas Muras - Fan Page</span>
+            </div>
+            <div class="accessibility-controls">
+                <button id="font-decrease" class="btn-secondary" type="button">A-</button>
+                <button id="font-increase" class="btn-secondary" type="button">A+</button>
+                <button id="theme-toggle" class="btn-secondary" type="button">Modo</button>
+            </div>
+        </div>
+
+        <nav class="main-nav">
+            <button class="nav-toggle" id="nav-toggle" type="button">☰</button>
+            <ul class="nav-list" id="nav-list">
+                <li><a href="index.html" class="nav-link">Inicio</a></li>
+                <li><a href="sobre-mi.html" class="nav-link active">Sobre mí</a></li>
+                <li><a href="curriculum.html" class="nav-link">Curriculum</a></li>
+                <li><a href="proyectos.html" class="nav-link">Proyectos</a></li>
+                <li><a href="contacto.html" class="nav-link">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="main-content">
+        <section class="section about">
+            <h1>Sobre mí</h1>
+            <div class="about-layout">
+                <div class="about-text">
+                    <p>
+                       Desde chico me fascinaba ver cómo la tecnología podía transformar la forma en que vivimos: 
+                       desde los primeros programas que probaba por curiosidad hasta descubrir cómo los datos podían explicar comportamientos, resolver problemas y anticipar tendencias. 
+                       Esa mezcla de curiosidad y asombro me llevó, casi sin darme cuenta, a meterme cada vez más en el mundo de la programación, la analítica y la resolución lógica de problemas. 
+                       Con el tiempo, lo que empezó como un interés genuino terminó convirtiéndose en una profesión que disfruto: hoy trabajo como analista de datos, utilizando herramientas modernas y de vanguardia para tomar información en bruto y convertirla en decisiones concretas, estrategias y mejoras reales.
+                    </p>
+
+                   <p>
+                        Fuera de la compu también tengo mis pasiones: 
+                        el fútbol y el tenis, la música, las películas y todo lo relacionado con la neurolingüística, que me ayuda a entender mejor cómo pensamos y aprendemos
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>Stack principal</h2>
+            <ul class="pill-list">
+                <li>SQL</li>
+                <li>SOQL</li>
+                <li>PowerQuery</li>
+                <li>Python - Django</li>
+                <li>ABAP</li>
+                <li>JQL</li>
+                <li>JavaScript</li>
+                <li>HTML</li>
+                <li>DAX</li>
+                <li>React Native</li>
+                <li>MediaPipe</li>
+                <li>BitBucket</li>
+                <li>Git / GitHub</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-contact">
+            <a href="mailto:lmuras@uade.com" class="contact-link">lmuras@uade.com</a>
+            &nbsp;•&nbsp;
+            <a href="https://www.linkedin.com/in/tu-linkedin" target="_blank" rel="noopener" class="contact-link">LinkedIn</a>
+            &nbsp;&nbsp;
+            <a href="contacto.html" class="btn-primary contact-now">Contactame Ahora</a>
+        </div>
+    </footer>
+    <!-- Floating contact panel (visible cuando se desplaza hacia abajo) -->
+    <div id="floating-contact" class="contact-panel" aria-hidden="true">
+        <button id="contact-toggle" class="contact-toggle" aria-expanded="false" aria-controls="floating-contact-form">Contactar</button>
+        <div id="floating-contact-form" class="contact-panel-body" hidden>
+            <form id="floating-contact-form-el" class="floating-form" novalidate>
+                <div class="form-group">
+                    <label for="floating-nombre">Nombre</label>
+                    <input type="text" id="floating-nombre" name="nombre" required>
+                    <span class="error-message" id="floating-nombre-error"></span>
+                </div>
+                <div class="form-group">
+                    <label for="floating-email">Email</label>
+                    <input type="email" id="floating-email" name="email" required>
+                    <span class="error-message" id="floating-email-error"></span>
+                </div>
+                <div class="form-group">
+                    <label for="floating-mensaje">Mensaje</label>
+                    <textarea id="floating-mensaje" name="mensaje" rows="3" required></textarea>
+                    <span class="error-message" id="floating-mensaje-error"></span>
+                </div>
+                <div class="form-actions">
+                    <button type="submit" class="btn-primary">Enviar</button>
+                    <button type="button" id="floating-contact-close" class="btn-secondary">Cerrar</button>
+                </div>
+                <p id="floating-form-status" class="form-status" aria-live="polite"></p>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
