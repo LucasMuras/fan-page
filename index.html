@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Inicio - FanPage Lucas</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <!-- jQuery CDN (permitido, no es framework de estilos) -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="js/main.js" defer></script>
+</head>
+<body>
+    <header class="site-header">
+        <div class="top-bar">
+            <div class="logo-area">
+                <span class="logo-text">Lucas Muras - Fan Page</span>
+            </div>
+
+            <!-- Controles de accesibilidad -->
+            <div class="accessibility-controls">
+                <button id="font-decrease" class="btn-secondary" type="button">A-</button>
+                <button id="font-increase" class="btn-secondary" type="button">A+</button>
+                <button id="theme-toggle" class="btn-secondary" type="button">Modo</button>
+            </div>
+        </div>
+
+        <nav class="main-nav">
+            <!-- Botón menú mobile -->
+            <button class="nav-toggle" id="nav-toggle" type="button">☰</button>
+
+            <ul class="nav-list" id="nav-list">
+                <li><a href="index.html" class="nav-link active">Inicio</a></li>
+                <li><a href="sobre-mi.html" class="nav-link">Sobre mí</a></li>
+                <li><a href="curriculum.html" class="nav-link">Curriculum</a></li>
+                <li><a href="proyectos.html" class="nav-link">Proyectos</a></li>
+                <li><a href="contacto.html" class="nav-link">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="main-content">
+        <!-- Hero -->
+        <section class="hero">
+            <div class="hero-text">
+                <h1>Hola, soy Lucas Muras</h1>
+                <p>Apasionado por las nuevas tecnologías y convencido de que son el motor que impulsa la innovación, 
+                    el crecimiento y la evolución de todas las industrias. Me motiva entender cómo la información, 
+                    las herramientas modernas y la creatividad pueden transformar procesos y generar impacto real.</p>
+                <p>En esta FanPage vas a encontrar un resumen claro de quién soy, qué hago y cómo podés contactarme para colaborar, conversar o simplemente compartir ideas.</p>
+                <a href="proyectos.html" class="btn-primary">Ver mis proyectos</a>
+            </div>
+
+            <div class="hero-image-wrapper">
+                <img src="imagenes/inicio.png" alt="Imagen principal" class="hero-image">
+            </div>
+        </section>
+
+        <!-- Conocimientos rápidos -->
+        <section class="section">
+            <h2>Conocimientos</h2>
+            <div class="skills-grid">
+                <article class="skill-card">
+                    <h3>SQL &amp; PowerQuery</h3>
+                    <p>Transformación y automatización de datos.</p>
+                </article>
+                <article class="skill-card">
+                    <h3>Cloudera &amp; Sac Analytics Cloud</h3>
+                    <p>Analítica cloud y validación de datos.</p>
+                </article>
+                <article class="skill-card">
+                    <h3>PowerBi &amp; Qlik View</h3>
+                    <p>Dashboards y modelos de negocio visuales.</p>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-contact">
+            <a href="mailto:lmuras@uade.com" class="contact-link">lmuras@uade.com</a>
+            &nbsp;•&nbsp;
+            <a href="https://www.linkedin.com/in/tu-linkedin" target="_blank" rel="noopener" class="contact-link">LinkedIn</a>
+            &nbsp;&nbsp;
+            <a href="contacto.html" class="btn-primary contact-now">Contactame Ahora</a>
+        </div>
+    </footer>
+    <!-- Floating contact panel (visible cuando se desplaza hacia abajo) -->
+    <div id="floating-contact" class="contact-panel" aria-hidden="true">
+        <button id="contact-toggle" class="contact-toggle" aria-expanded="false" aria-controls="floating-contact-form">Contactar</button>
+        <div id="floating-contact-form" class="contact-panel-body" hidden>
+            <form id="floating-contact-form-el" class="floating-form" novalidate>
+                <div class="form-group">
+                    <label for="floating-nombre">Nombre</label>
+                    <input type="text" id="floating-nombre" name="nombre" required>
+                    <span class="error-message" id="floating-nombre-error"></span>
+                </div>
+                <div class="form-group">
+                    <label for="floating-email">Email</label>
+                    <input type="email" id="floating-email" name="email" required>
+                    <span class="error-message" id="floating-email-error"></span>
+                </div>
+                <div class="form-group">
+                    <label for="floating-mensaje">Mensaje</label>
+                    <textarea id="floating-mensaje" name="mensaje" rows="3" required></textarea>
+                    <span class="error-message" id="floating-mensaje-error"></span>
+                </div>
+                <div class="form-actions">
+                    <button type="submit" class="btn-primary">Enviar</button>
+                    <button type="button" id="floating-contact-close" class="btn-secondary">Cerrar</button>
+                </div>
+                <p id="floating-form-status" class="form-status" aria-live="polite"></p>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
